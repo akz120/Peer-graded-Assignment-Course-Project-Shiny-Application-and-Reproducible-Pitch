@@ -1,0 +1,57 @@
+---
+title: "presentation of shiny app"
+author: "Alma Zhantleuova"
+date: "11/26/2019"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## 2017 Car crash data in Allegheny County
+
+Shiny Applicatio Link : https://akz120.shinyapps.io/myapp/ 
+Github Repository Link : https://github.com/akz120/Peer-graded-Assignment-Course-Project-Shiny-Application-and-Reproducible-Pitch 
+
+This Application uses data about car's accidents in Allegheny County in the US, To demonstrate various capabilities from the Developing Data Products Course.
+The Application provides visualization about car accidents in Allegheny County in 2017.
+
+- Using Shiny UI Server Application. 
+- Using Leaflet interactive MAP application. 
+- Adding customized markers, and Popup. 
+- Two Input Widget (Drop down list and Slide Bar).
+- Using Reactive function. 
+- Server Business logic (Subsetting data frame based on input).
+- Full help page (Documentation)</font>.
+
+## The Data 
+
+- Data contains information on all accidents in Allegheny County in 2017.
+- Data used: 
+
+Geo Location data. 
+Months of the Accident. 
+AUTOMOBILE_COUNT -  the number of cars involved. 
+FATAL_COUNT - Total number of death. 
+ILLEGAL_DRUG_RELATED - Ilegal drug involvement. 
+DRINKING_DRIVER Number of Drunk People involved in the car accident. 
+INJURY_COUNT - Number of injuries. 
+Fatal And INJURY - Will be used to classifying the type of the accident 
+   
+
+## Data and Server calculations 
+
+The following calculations are done in the server :
+
+Load data. 
+Subset data 
+Remove the accidents with zero cars involved. 
+Remove NA items.
+Create new columns which classify the accident (Death/Injury/None).
+Check the Min and Max cars number involved and pass it to the slider input.
+Slice the dataset dynamically based on Month selection and the number of cars selection. 
+
+## Shiny App
+
+![some caption](ShinyApp.PNG)
